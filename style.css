@@ -1,7 +1,3 @@
-/* =========================
-   画面中央配置
-========================= */
-
 body {
   min-height: 100vh;
   margin: 0;
@@ -10,8 +6,8 @@ body {
 
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
 
   font-family: "Yu Gothic Rounded",
                "BIZ UDGothic",
@@ -20,150 +16,109 @@ body {
                sans-serif;
 }
 
-/* =========================
-   タイトル
-========================= */
-
 h1 {
-  margin: 0 0 30px;
+  margin-bottom: 40px;
 
   color: #1565c0;
-  font-size: 38px;
+  font-size: 42px;
   font-weight: bold;
 }
 
-/* =========================
-   見出し
-   （必要・未確定・不必要）
-========================= */
+/* 見出し */
 
-body > div:nth-of-type(1),
-body > div:nth-of-type(2),
-body > div:nth-of-type(3) {
-  display: inline-block;
-  width: 60px;
-
-  text-align: center;
-  font-size: 16px;
-  font-weight: bold;
-  color: #333;
-}
-
-/* 3つの見出しを横並び */
-
-body > div:nth-of-type(1) {
-  margin-left: 108px;
-}
-
-/* =========================
-   食事行
-========================= */
-
-body > div:nth-of-type(4),
-body > div:nth-of-type(5),
-body > div:nth-of-type(6) {
+.header-row {
   display: grid;
+  grid-template-columns: 150px 90px 90px 90px;
 
-  grid-template-columns: 90px 50px 50px 50px;
+  align-items: center;
+  text-align: center;
 
-  column-gap: 18px;
+  font-size: 20px;
+  font-weight: bold;
+
+  margin-bottom: 10px;
+}
+
+/* 朝昼夕 */
+
+.meal-row {
+  display: grid;
+  grid-template-columns: 150px 90px 90px 90px;
+
   align-items: center;
 
-  min-height: 56px;
+  min-height: 90px;
 
-  font-size: 18px;
+  font-size: 28px;
   font-weight: bold;
-
-  color: #000;
 }
 
-/* =========================
-   ラベル
-========================= */
+/* ラベル */
 
 label {
-  width: 50px;
-  height: 50px;
-
   display: flex;
   justify-content: center;
   align-items: center;
-
-  cursor: pointer;
 }
 
-/* =========================
-   ラジオボタン
-========================= */
+/* ラジオボタン */
 
 input[type="radio"] {
   appearance: none;
 
-  width: 28px;
-  height: 28px;
+  width: 36px;
+  height: 36px;
 
-  margin: 0;
-
-  border: 2px solid #888;
+  border: 3px solid #888;
   border-radius: 50%;
 
   background: #fff;
 
   cursor: pointer;
-
-  transition: all 0.2s ease;
 }
 
 input[type="radio"]:checked {
-  border-color: #d32f2f;
-  background: #d32f2f;
-  box-shadow: inset 0 0 0 5px #fff;
+  border-color: #c0392b;
+  background: #c0392b;
+
+  box-shadow: inset 0 0 0 8px #fff;
 }
 
-/* 登録後用 */
+/* JS担当者が使用 */
 
 .registered input[type="radio"]:checked {
   border-color: #2e7d32;
   background: #2e7d32;
 }
 
-/* =========================
-   ボタン
-========================= */
+/* ボタン */
 
 #Submit_Button {
-  margin-top: 25px;
+  margin-top: 40px;
 
-  width: 220px;
-  height: 54px;
+  width: 320px;
+  height: 80px;
 
   border: none;
-  border-radius: 27px;
+  border-radius: 40px;
 
   background: #2e7d32;
-  color: #fff;
 
-  font-size: 20px;
+  color: #fff;
+  font-size: 26px;
   font-weight: bold;
 
   cursor: pointer;
 }
 
+/* ↓重要：二重表示防止のため削除 */
 #Submit_Button::before {
-  content: "登録する";
+  content: none;
 }
 
 #Submit_Button:hover {
   background: #1b5e20;
 }
-
-#Submit_Button:active {
-  background: #145a17;
-}
-
-/* =========================
-   スマホ
-========================= */
 
 @media (max-width: 480px) {
 
@@ -171,21 +126,18 @@ input[type="radio"]:checked {
     font-size: 32px;
   }
 
-  body > div:nth-of-type(4),
-  body > div:nth-of-type(5),
-  body > div:nth-of-type(6) {
-    grid-template-columns: 70px 44px 44px 44px;
-    column-gap: 10px;
+  .header-row,
+  .meal-row {
+    grid-template-columns: 80px 60px 60px 60px;
   }
 
-  body > div:nth-of-type(1) {
-    margin-left: 82px;
+  .meal-row {
+    font-size: 20px;
   }
 
-  body > div:nth-of-type(1),
-  body > div:nth-of-type(2),
-  body > div:nth-of-type(3) {
-    width: 44px;
-    font-size: 14px;
+  #Submit_Button {
+    width: 220px;
+    height: 60px;
+    font-size: 20px;
   }
 }
