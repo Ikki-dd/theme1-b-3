@@ -9,58 +9,49 @@
 <body>
   <h1>ごはんボード</h1>
 
+  <div class="header-row">
+  <div></div>
   <div>必要</div>
   <div>未確定</div>
   <div>不必要</div>
+</div>
 
-  <div>
-    ユーザ
-    <select name ="user_button" id="user_button">
-      <option value="A">A</option>
-      <option value="B">B</option>
-      <option value="C">C</option>
-      <option value="D">D</option>
-    </select>
-  </div>
-
-  <div>
-    朝食
-    <label for="Breakfast_Required">
-      <input id="Breakfast_Required" type="radio" name="Breakfast_Schedule" value="必要">
-    </label>
-    <label for="Breakfast_Undecided">
-      <input id="Breakfast_Undecided" type="radio" name="Breakfast_Schedule" value="未確定">
-    </label>
-    <label for="Breakfast_Unnecessary">
-      <input id="Breakfast_Unnecessary" type="radio" name="Breakfast_Schedule" value="不必要">
-    </label>
-  </div>
-
-  <div>
-    昼食
-    <label for="Lunch_Required">
-      <input id="Lunch_Required" type="radio" name="Lunch_Schedule" value="必要">
-    </label>
-    <label for="Lunch_Undecided">
-      <input id="Lunch_Undecided" type="radio" name="Lunch_Schedule" value="未確定">
-    </label>
-    <label for="Lunch_Unnecessary">
-      <input id="Lunch_Unnecessary" type="radio" name="Lunch_Schedule" value="不必要">
-    </label>
-  </div>
-
-  <div>
-    夕食
-    <label for="Dinner_Required">
-      <input id="Dinner_Required" type="radio" name="Dinner_Schedule" value="必要">
-    </label>
-    <label for="Dinner_Undecided">
-      <input id="Dinner_Undecided" type="radio" name="Dinner_Schedule" value="未確定">
-    </label>
-    <label for="Dinner_Unnecessary">
-      <input id="Dinner_Unnecessary" type="radio" name="Dinner_Schedule" value="不必要">
-    </label>
-  </div>
+<div class="meal-row">
+  <div>朝食</div>
+  <label for="Breakfast_Required">
+    <input id="Breakfast_Required" type="radio" name="Breakfast_Schedule">
+  </label>
+  <label for="Breakfast_Undecided">
+    <input id="Breakfast_Undecided" type="radio" name="Breakfast_Schedule">
+  </label>
+  <label for="Breakfast_Unnecessary">
+    <input id="Breakfast_Unnecessary" type="radio" name="Breakfast_Schedule">
+  </label>
+</div>
+<div class="meal-row">
+  <div>昼食</div>
+  <label for="Lunch_Required">
+    <input id="Lunch_Required" type="radio" name="Lunch_Schedule">
+  </label>
+  <label for="Lunch_Undecided">
+   <input id="Lunch_Undecided" type="radio" name="Lunch_Schedule">
+  </label>
+  <label for="Lunch_Unnecessary">
+    <input id="Lunch_Unnecessary" type="radio" name="Lunch_Schedule">
+  </label>
+</div>
+<div class="meal-row">
+  <div>夕食</div>
+  <label for="Dinner_Required">
+    <input id="Dinner_Required" type="radio" name="Dinner_Schedule">
+  </label>
+  <label for="Dinner_Undecided">
+    <input id="Dinner_Undecided" type="radio" name="Dinner_Schedule">
+  </label>
+  <label for="Dinner_Unnecessary">
+    <input id="Dinner_Unnecessary" type="radio" name="Dinner_Schedule">
+  </label>
+</div>
 
   <button id="Submit_Button" type="button">登録する</button>
 
