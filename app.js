@@ -1,4 +1,5 @@
 const submitButton = document.getElementById("Submit_Button");
+const clearButton = document.getElementById("Clear_Button");
 
 let mealData = JSON.parse(localStorage.getItem("mealData")) || {};
 
@@ -47,10 +48,28 @@ submitButton.addEventListener("click", () => {
 
     alert("登録しました。");
 
-    // ラジオボタンをリセット
     document
         .querySelectorAll('input[type="radio"]')
         .forEach(radio => radio.checked = false);
+});
+
+clearButton.addEventListener("click", () => {
+
+    if (!confirm("全ユーザーの登録情報を削除しますか？")) {
+        return;
+    }
+
+    mealData = {};
+
+    localStorage.removeItem("mealData");
+
+    displayTable();
+
+    document
+        .querySelectorAll('input[type="radio"]')
+        .forEach(radio => radio.checked = false);
+
+    alert("全ユーザーのデータを削除しました。");
 });
 
 function createTable() {
