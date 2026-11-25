@@ -146,3 +146,22 @@ input[type="radio"]:checked {
     font-size: 20px;
   }
 }
+
+.user-select {
+  font-size: 22px;
+  font-weight: bold;
+
+  margin-bottom: 30px;
+}
+
+#user_button {
+  font-size: 20px;
+
+  padding: 6px 10px;
+
+  min-width: 80px;
+  min-height: 40px;
+
+  border: 2px solid #888;
+  border-radius: 6px;
+}
