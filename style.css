@@ -131,6 +131,11 @@ input[type="radio"]:checked {
     grid-template-columns: 80px 60px 60px 60px;
   }
 
+  /* 必要・未確定・不必要 */
+  .header-row {
+    font-size: 12px;
+  }
+
   .meal-row {
     font-size: 20px;
   }
